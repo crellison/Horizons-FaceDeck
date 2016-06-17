@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>{{title}}</title>
+	<link rel='stylesheet' href='/stylesheets/style.css' />
+	<!-- <script src="./node_modules/jquery.js"></script> -->
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+
+</head>
+<script type="text/javascript">
+	$("ul").empty()
+	function flip() {
+		$('.card').toggleClass('dropped')
+		$('.text').toggleClass('invisible')
+		$('.card.dropped').off()
+		$('.card.dropped').click(function(e) {
+			e.preventDefault()
+			// console.log($(this).parent().next('li'))
+			$("ul").children("li:first").remove();
+			// $(this).parent().css('display','none')
+			// $(this).parent().next('li').css('display','block')
+		})
+	}
+</script>
+<body>
+	<header></header>
+	<ul class="card-holder">
+		{{{body}}}
+	</ul>
+</body>
+<script type="text/javascript">
+	$('li').first().css('display','block')
+</script>
+</html>

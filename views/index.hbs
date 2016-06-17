@@ -1,0 +1,12 @@
+{{#each data}}
+<li>
+	<div class="text">
+		<h2>{{this.name}}</h2>
+	</div>
+	<div class="card" onclick="flip()" style="background-image: url({{this.image}})">
+	</div>
+</li>
+{{/each}}
+<li>
+	<h2>that's everyone!</h2>
+</li>

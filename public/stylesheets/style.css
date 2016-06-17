@@ -1,0 +1,81 @@
+body {
+	font-family: 'Cabin','Helvetica Neue',Helvetica,sans-serif;
+	font-weight: bold;
+	color: #fff;
+	overflow: hidden;
+	height: 100vh;
+	margin: 0;
+	background-color: #222;
+}
+header {
+	background-image: url(horizons.png);
+	background-position: center center;
+	margin: 10px 0 20px 0;
+	padding: 30px 0 20px 0;
+	background-size: 50px;
+	background-repeat: no-repeat;
+
+}
+ul > li:first-child {
+	display: block;
+}
+ul {
+	padding: 0;
+}
+li {
+	display: none;
+	align-self: center;
+	/*position: relative;*/
+	width: 80%;
+	max-width: 60vh;
+	background-size: auto 120%;
+	border-radius: 25px;
+}
+h2 {
+	margin: 10px;
+}
+.card-holder {
+	display: flex;
+	flex-flow: column;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+}
+.invisible {
+	display: block !important;
+}
+.card {
+	align-self: center;
+	margin: 0 !important;
+	/*position: relative;*/
+	width: 100%;
+	max-width: 60vh;
+	background-size: auto 120%;
+	border-radius: 25px;
+	background-position: auto center;
+	-webkit-transition: -webkit-transform .3s;
+    -moz-transition: -moz-transform .3s;
+    -o-transition: -o-transform .3s;
+    transition: transform .3s;
+}
+.card.dropped {
+	-webkit-transform: translate(0,50px);
+	-moz-transform: translate(0,50px);
+	-o-transform: translate(0,50px);
+	transform: translate(0,50px);
+}
+.card:after {
+	content: "";
+	display: block;
+	padding-bottom: 100%;
+	background-repeat: no-repeat;
+}
+.text {
+	display: none;
+	position: absolute;
+	margin-left: auto;
+	margin-right: auto;
+	left: 0;
+	right: 0;
+	color: #fff;
+}
